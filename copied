@@ -1,0 +1,21 @@
+<html>
+  <style>
+    html {
+      width: 300px;
+      height: 400px;
+    }
+
+    p {
+      font-family: verdana;
+      font-size: 14px;
+      color:chocolate
+    }
+  </style>
+  <body>
+    <h1>Color Correction</h1>
+    <p>It's me, hi, I'm the problem it's me.</p>
+    <p>At teatime, everybody agrees.</p>
+  </body>
+  
+  
+</html>

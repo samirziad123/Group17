@@ -1,0 +1,82 @@
+html {
+    height:500px;
+    width:400px;
+    background-color: white;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.tabs {
+  max-width: 400px;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.tabs-head {
+  display: flex;
+  width: 100%;
+  align-items: stretch;
+  position:fixed;
+  bottom:0;
+}
+
+.tabs-toggle {
+  display: flex;
+  width: 50%;
+  height: 50px;
+  align-items: center;
+  justify-content: space-around;
+  background: whitesmoke;
+  cursor: pointer;
+}
+
+.tabs-toggle:hover {
+  background: peachpuff;
+}
+
+.tabs-toggle.active {
+  background: pink;
+  border-bottom: 3px solid red;
+}
+
+.tabs-content {
+  margin:0;
+  display: none;
+}
+
+.tabs-content.active{
+  display: block;
+}
+
+.tabs-text {
+  font-size: 14px;
+  color: #000;
+}
+
+
+
+.filter {
+  font-size: 20px;
+  list-style: none;
+  padding: 5px;
+  margin: 0;
+  border-bottom: black 1px solid;
+}
+
+
+button {
+  position: fixed;
+  bottom: 70px;
+  left: 165px; /*need to align better or align specifically for logout and new filter*/
+  align-items: center;
+} 
+
+p {
+  font-size: 20px;
+  padding: 5px;
+}
