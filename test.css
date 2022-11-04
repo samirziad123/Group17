@@ -66,8 +66,12 @@ html {
   padding: 5px;
   margin: 0;
   border-bottom: black 1px solid;
+  background: lightgray;
 }
 
+.filter.active{
+  color: coral;
+}
 
 button {
   position: fixed;

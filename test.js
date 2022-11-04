@@ -16,3 +16,18 @@ tabs.forEach((tab,index) => {
       tabs[index].classList.add('active');
    })
 });
+
+filters = document.querySelectorAll('.filter');
+
+filters.forEach((filter,index) => {
+
+   filter.addEventListener('click', () => {
+      filters.forEach(filter => {
+         filter.classList.remove('active');
+      })
+
+      filters[index].classList.add('active');
+   })
+     
+})
+   
