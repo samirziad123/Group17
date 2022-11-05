@@ -17,16 +17,16 @@ tabs.forEach((tab,index) => {
    })
 });
 
-filters = document.querySelectorAll('.filter');
+filters_ours = document.querySelectorAll('.filter');
 
-filters.forEach((filter,index) => {
+filters_ours.forEach((filter,index) => {
 
    filter.addEventListener('click', () => {
-      filters.forEach(filter => {
+      filters_ours.forEach(filter => {
          filter.classList.remove('active');
       })
 
-      filters[index].classList.add('active');
+      filters_ours[index].classList.add('active');
    })
      
 })

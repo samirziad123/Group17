@@ -1,10 +1,14 @@
 {
-    "manifest_version": 3,
+    "manifest_version": 2,
     "name": "Color Correction",
     "description": "Base Level Extension",
     "version": "1.0",
-    "action": {
+    "browser_action": {
       "default_popup": "test.html",
       "default_icon": "hello_extensions.png"
-    }
+    },
+    "permissions": [
+      "activeTab",
+      "storage"
+    ]
   }
