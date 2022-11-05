@@ -30,4 +30,16 @@ filters.forEach((filter,index) => {
    })
      
 })
+
+document.querySelector('.new-filter').addEventListener('click', () => {
    
+   
+   newli = document.createElement("li")
+   newli.textContent = "Custom 2"
+   newli.classList.add('filter')
+   list = document.querySelector(".list")
+   list.appendChild(newli)
+
+
+});
+
