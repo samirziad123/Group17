@@ -6,9 +6,8 @@ jobs:
       - image: cimg/base:stable
     steps:
       - checkout
-      - run:
-          name: Install dependencies and build project
-          command: npm install
+      - node/install-packages:
+          pkg-manager: npm
       - run:
           name: Run tests
           command: npm test
