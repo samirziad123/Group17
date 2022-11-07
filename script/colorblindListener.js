@@ -43,7 +43,5 @@ document.querySelectorAll('.filter').forEach(radioButton => {
     console.log(radioButton.id);
     setSelected(radioButton.id);
     injectFilter(`filters/${filter}.js`);
-    // popup-specific filters
-    applyFilter((window.selectedFilter = filter));
   });
 });
