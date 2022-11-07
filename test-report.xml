@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testExecutions version="1">
+  <file path="/Users/samirziad/IdeaProjects/ColorCorrector/Group17/tests/unit/popup.test.js">
+    <testCase name="Check that the popup title is rendered properly" duration="92"/>
+    <testCase name="Check that the button is working properly" duration="2"/>
+  </file>
+</testExecutions>
