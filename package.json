@@ -1,0 +1,19 @@
+{
+  "dependencies": {
+    "jsdom": "^20.0.2",
+    "node": "^19.0.0"
+  },
+  "devDependencies": {
+    "jest": "^29.2.2",
+    "jest-environment-jsdom": "^29.2.2",
+    "jest-sonar-reporter": "^2.0.0"
+  },
+  "scripts": {
+    "test": "jest"
+  },
+  "jest": {
+    "testEnvironment": "jsdom",
+    "collectCoverage": true,
+    "testResultsProcessor": "jest-sonar-reporter"
+  }
+}
