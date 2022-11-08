@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1667794619476" clover="3.2.0">
-  <project timestamp="1667794619476" name="All files">
+<coverage generated="1667887283831" clover="3.2.0">
+  <project timestamp="1667887283831" name="All files">
     <metrics statements="13" coveredstatements="13" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1" elements="14" coveredelements="14" complexity="0" loc="13" ncloc="13" packages="1" files="1" classes="1"/>
     <file name="popup.js" path="/Users/samirziad/IdeaProjects/ColorCorrector/Group17/popup.js">
       <metrics statements="13" coveredstatements="13" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>

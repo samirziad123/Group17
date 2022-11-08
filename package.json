@@ -17,8 +17,11 @@
     "testResultsProcessor": "jest-sonar-reporter",
     "coveragePathIgnorePatterns": [
       "/node_modules/",
-      "/test/unit/",
-      "./test.js"
+      "/test/unit/"
+    ],
+    "testPathIgnorePatterns": [
+      "/node_modules/",
+      "<rootDir>/test.js"
     ]
   }
 }
