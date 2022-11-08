@@ -14,6 +14,11 @@
   "jest": {
     "testEnvironment": "jsdom",
     "collectCoverage": true,
-    "testResultsProcessor": "jest-sonar-reporter"
+    "testResultsProcessor": "jest-sonar-reporter",
+    "coveragePathIgnorePatterns": [
+      "/node_modules/",
+      "/test/unit/",
+      "test.js"
+    ]
   }
 }
