@@ -18,7 +18,7 @@
     "coveragePathIgnorePatterns": [
       "/node_modules/",
       "/test/unit/",
-      "test.js"
+      "./test.js"
     ]
   }
 }
