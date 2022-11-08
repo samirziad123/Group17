@@ -30,16 +30,17 @@ filters_ours.forEach((filter,index) => {
    })
      
 })
-
-document.querySelector('.new-filter').addEventListener('click', () => {
-   
-   
-   newli = document.createElement("li")
-   newli.textContent = "Custom 2"
-   newli.classList.add('filter')
-   list = document.querySelector(".list")
-   list.appendChild(newli)
+window.addEventListener('DOMContentLoaded', (event) => {
+   document.querySelector('.new-filter').addEventListener('click', () => {
 
 
+      newli = document.createElement("li")
+      newli.textContent = "Custom 2"
+      newli.classList.add('filter')
+      list = document.querySelector(".list")
+      list.appendChild(newli)
+
+
+   })
 });
 
