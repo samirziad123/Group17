@@ -1,86 +1,117 @@
 html {
-    height:500px;
-    width:400px;
-    background-color: white;
+  height:500px;
+  width:400px;
+  background-color: white;
 }
 
 * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+margin: 0;
+padding: 0;
+box-sizing: border-box;
 }
 
 .tabs {
-  max-width: 400px;
-  display: flex;
-  flex-direction: column;
-  width: 100%;
+max-width: 400px;
+display: flex;
+flex-direction: column;
+width: 100%;
 }
 
 .tabs-head {
-  display: flex;
-  width: 100%;
-  align-items: stretch;
-  position:fixed;
-  bottom:0;
+display: flex;
+width: 100%;
+align-items: stretch;
+position:fixed;
+bottom:0;
 }
 
 .tabs-toggle {
-  display: flex;
-  width: 50%;
-  height: 50px;
-  align-items: center;
-  justify-content: space-around;
-  background: whitesmoke;
-  cursor: pointer;
+display: flex;
+width: 50%;
+height: 50px;
+align-items: center;
+justify-content: space-around;
+background: rgb(255, 255, 255);
+cursor: pointer;
+font-family: Verdana, Geneva, Tahoma, sans-serif;
+font-size: medium;
 }
 
 .tabs-toggle:hover {
-  background: peachpuff;
+background: peachpuff;
+padding-bottom: 10px;
 }
 
 .tabs-toggle.active {
-  background: pink;
-  border-bottom: 3px solid red;
+background: peachpuff;
+border-bottom: 3px solid rgb(252, 77, 14);
 }
 
 .tabs-content {
-  margin:0;
-  display: none;
+margin:0;
+display: none;
 }
 
 .tabs-content.active{
-  display: block;
+display: block;
 }
 
 .tabs-text {
-  font-size: 14px;
-  color: #000;
+font-size: 14px;
+color: #000;
 }
 
-
-
-.filter {
-  font-size: 20px;
-  list-style: none;
-  padding: 5px;
-  margin: 0;
-  border-bottom: black 1px solid;
-  background: lightgray;
+.filter, .custom-filter {
+font-size: 20px;
+list-style: none;
+padding: 5px;
+margin: 0;
+border-bottom: black 1px solid;
+background: lightgray;
+font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
-.filter.active{
-  color: coral;
+.filter.active {
+color: rgb(250, 99, 44);
+background: rgb(155, 153, 153);
+}
+
+.filter:hover, .custom-filter:hover {
+background: rgb(112, 112, 112);
 }
 
 button {
-  position: fixed;
-  bottom: 70px;
-  left: 165px; /*need to align better or align specifically for logout and new filter*/
-  align-items: center;
-} 
+width: 100px;
+height: 45px;
+position: fixed;
+background-color: white;
+bottom: 70px;
+left: 150px; /*need to align better or align specifically for logout and new filter*/
+align-items: center;
+padding: 5px;
+border: 2px solid black;
+border-color: coral;
+font-family: Verdana, Geneva, Tahoma, sans-serif;
+font-size: 14px;
+color: rgb(31, 31, 31);
+}
+button:hover {
+background-color: coral;
+}
+.new-filter {
+left: 75px;
+}
+.del-filter {
+left: 225px;
+}
 
 p {
-  font-size: 20px;
-  padding: 5px;
+font-size: 20px;
+padding-bottom: 10px;
+padding-top: 5px;
+}
+
+.color-sliders {
+max-width: 200px;
+font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
