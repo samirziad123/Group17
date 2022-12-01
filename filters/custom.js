@@ -22,21 +22,26 @@ setTimeout(function() {
 }, 1);
 
 
-rScaled = 2 / 255.0
-gScaled = 20 / 255.0
-bScaled = 100 / 255.0
+function applyCustom(r,g,b){
+    rScaled = r / 255.0
+    gScaled = g / 255.0
+    bScaled = b / 255.0
 
-rBalanced = 1 - rScaled
-gBalanced = 1 - gScaled
-bBalanced = 1 - bScaled
+    rBalanced = 1 - rScaled
+    gBalanced = 1 - gScaled
+    bBalanced = 1 - bScaled
 
-changed = document.querySelector('feColorMatrix')
+    changed = document.querySelector('feColorMatrix')
 
-newFilter = `${rScaled} ${rBalanced} 0 0 0  0 ${gScaled} ${gBalanced} 0 0  0 ${bBalanced} ${bScaled} 0 0  0 0 0 1 0`
+    newFilter = `${rScaled} ${rBalanced} 0 0 0  0 ${gScaled} ${gBalanced} 0 0  0 ${bBalanced} ${bScaled} 0 0  0 0 0 1 0`
 
-console.log(newFilter)
+    console.log(newFilter)
 
 
-changed.setAttribute(
-    'values', newFilter
-);
+    changed.setAttribute(
+        'values', newFilter
+    );
+}
+
+
+applyCustom(200,150,100)
