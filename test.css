@@ -112,6 +112,11 @@ padding-top: 5px;
 }
 
 .color-sliders {
+  display:block;
 max-width: 200px;
 font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.slider{
+  display:block;
 }

@@ -18,6 +18,7 @@
             <li id="tritanopia" class="filter">Tritanopia</li>
             <li id="deuteranomaly" class="filter">Deuteranomaly</li>
             <li id="deuteranopia" class="filter">Deuteranopia</li>
+            <li id="custom" class="filter">Custom</li>
           </ul>  
         </div>
 
@@ -27,9 +28,9 @@
           </ul>
           <p>Create a new custom filter:</p>
           <div id="color-sliders">
-          <input type="range" min="0" max="255" value="0" id="r-slider">Red</input>
-            <input type="range" min="0" max="255" value="0" id="g-slider">Green</input>
-            <input type="range" min="0" max="255" value="0" id="b-slider">Blue</input>
+            <input class="slider" type="range" min="0" max="255" value="0" id="r-slider">Red: <b id="rVal">0</b></input>
+            <input class="slider" type="range" min="0" max="255" value="0" id="g-slider">Green: <b id="gVal">0</b></input>
+            <input class="slider" type="range" min="0" max="255" value="0" id="b-slider">Blue: <b id="bVal">0</b></input>
           </div>
           <input type="text" id="filter-name">Name your filter</input>
           <button class="new-filter">Add Filter</button>

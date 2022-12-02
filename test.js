@@ -47,6 +47,7 @@ custom_filters.forEach((filter,index) => {
    })   
     
 })
+
 window.addEventListener('DOMContentLoaded', (event) => {
 
    //on button click, add custom filter
@@ -69,3 +70,22 @@ window.addEventListener('DOMContentLoaded', (event) => {
    });
 });
 
+rValElem = document.getElementById("rVal")
+gValElem = document.getElementById("gVal")
+bValElem = document.getElementById("bVal")
+
+rSlider = document.getElementById("r-slider")
+gSlider = document.getElementById("g-slider")
+bSlider = document.getElementById("b-slider")
+
+rSlider.oninput = function() {
+   rValElem.innerHTML = this.value
+}
+
+gSlider.oninput = function() {
+   gValElem.innerHTML = this.value
+}
+
+bSlider.oninput = function() {
+   bValElem.innerHTML = this.value
+}
