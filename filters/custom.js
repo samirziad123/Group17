@@ -1,5 +1,7 @@
 // custom
 
+
+
 if (document.getElementById("styleID612481")) {
     stylingID = document.getElementById("styleID612481").remove();
     filterID = document.getElementById("filterID471924").remove();
@@ -44,4 +46,21 @@ function applyCustom(r,g,b){
 }
 
 
-applyCustom(200,150,100)
+chrome.storage.local.get(["R"], function(data) {
+    
+    console.log("Value currently is " + data.R);
+    applyCustom(data.R,0,0)
+});
+
+
+// chrome.storage.local.get("R", function(data) {
+//     if(typeof R == "undefined") {
+//         console.log("undefined")
+//     } else {
+//         applyCustom(R,0,0)
+//     }
+// });
+
+
+
+

@@ -70,9 +70,11 @@ window.addEventListener('DOMContentLoaded', (event) => {
    });
 });
 
-rValElem = document.getElementById("rVal")
-gValElem = document.getElementById("gVal")
-bValElem = document.getElementById("bVal")
+var rValElem = document.getElementById("rVal")
+var gValElem = document.getElementById("gVal")
+var bValElem = document.getElementById("bVal")
+
+var x = 1117
 
 rSlider = document.getElementById("r-slider")
 gSlider = document.getElementById("g-slider")
@@ -80,7 +82,25 @@ bSlider = document.getElementById("b-slider")
 
 rSlider.oninput = function() {
    rValElem.innerHTML = this.value
+   chrome.storage.local.get("R", function(data){
+      if(data.R != undefined){
+         chrome.storage.local.remove("R", function(){
+            console.log("Removed")
+         })
+      }
+      else {
+         chrome.storage.local.set({ R: rValElem.innerHTML }, function(data) {
+            console.log("Value is set to " + rValElem.innerHTML);
+         });
+      }
+   })
+   
+   
 }
+
+
+
+
 
 gSlider.oninput = function() {
    gValElem.innerHTML = this.value
@@ -89,3 +109,7 @@ gSlider.oninput = function() {
 bSlider.oninput = function() {
    bValElem.innerHTML = this.value
 }
+
+
+
+
