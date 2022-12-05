@@ -1,6 +1,14 @@
 <!DOCTYPE html>
 <html>
   <head>
+
+    <script src="./login.js"></script>
+
+    <script src="https://www.gstatic.com/firebasejs/7.19.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.19.1/firebase-auth.js"></script>
+    <script src="https://cdn.firebase.com/libs/firebaseui/3.5.2/firebaseui.js"></script>
+  
+    <link type="text/css" rel="stylesheet" href="https://cdn.firebase.com/libs/firebaseui/3.5.2/firebaseui.css" />
     <link href="test.css" rel="stylesheet">
   </head>
   <body>
@@ -10,6 +18,7 @@
           <span class="tabs-toggle">Custom Filters</span>
           <span class="tabs-toggle">Account</span>
       </div>
+
       <div class="tabs-body">
         <div class="tabs-content active">
           <ul id="option-achromatomaly" class="default-list">
@@ -38,13 +47,15 @@
         </div>
       </div>
 
-        <div class="tabs-content">
-          <p>Email: abcdef123@gmail.com</p>
-          <button>Logout</button>
+        <div class="tabs-content" id="login-page">
+          <p id="user-email">Log in to view your custom filters</p>
+          <button id="log-out"> </button>
+          <div id="sign-in-options"></div>
         </div>
     </div>
-    <script type="text/javascript" src="test.js"></script>
 
+    <script type="text/javascript" src="test.js"></script>
+    <script src="./firebase-config.js"></script>
     <script src="../script/colorblindListener.js"></script>
     <script src="./script/colorblindListener.js"></script>
   </body>
