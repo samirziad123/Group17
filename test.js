@@ -74,33 +74,13 @@ var rValElem = document.getElementById("rVal")
 var gValElem = document.getElementById("gVal")
 var bValElem = document.getElementById("bVal")
 
-var x = 1117
-
 rSlider = document.getElementById("r-slider")
 gSlider = document.getElementById("g-slider")
 bSlider = document.getElementById("b-slider")
 
 rSlider.oninput = function() {
-   rValElem.innerHTML = this.value
-   chrome.storage.local.get("R", function(data){
-      if(data.R != undefined){
-         chrome.storage.local.remove("R", function(){
-            console.log("Removed")
-         })
-      }
-      else {
-         chrome.storage.local.set({ R: rValElem.innerHTML }, function(data) {
-            console.log("Value is set to " + rValElem.innerHTML);
-         });
-      }
-   })
-   
-   
+   rValElem.innerHTML = this.value   
 }
-
-
-
-
 
 gSlider.oninput = function() {
    gValElem.innerHTML = this.value
@@ -109,6 +89,31 @@ gSlider.oninput = function() {
 bSlider.oninput = function() {
    bValElem.innerHTML = this.value
 }
+
+addFilter = document.querySelector(".new-filter")
+
+addFilter.addEventListener('click', () => {
+   RGB = [rValElem.innerHTML, gValElem.innerHTML, bValElem.innerHTML]
+   chrome.storage.local.get("RGB", function(data){
+   if(data.RGB != undefined){
+      chrome.storage.local.remove("RGB", function(){
+         console.log("Removed")
+      })
+      chrome.storage.local.set({ RGB: RGB }, function(data) {
+         console.log("Value[0] is set to " + RGB[0]);
+      });
+   }
+   else {
+      chrome.storage.local.set({ RGB: RGB }, function(data) {
+         console.log("Value[0] is set to " + RGB[0]);
+      });
+   }
+})
+})
+
+
+
+//pleaseeee
 
 
 
