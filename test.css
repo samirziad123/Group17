@@ -71,7 +71,7 @@ background: lightgray;
 font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
-.filter.active {
+.filter.active, .custom-filter.active {
 color: rgb(250, 99, 44);
 background: rgb(155, 153, 153);
 }
@@ -80,7 +80,7 @@ background: rgb(155, 153, 153);
 background: rgb(112, 112, 112);
 }
 
-button {
+.new-filter, .del-filter {
 width: 100px;
 height: 45px;
 position: fixed;
@@ -95,6 +95,7 @@ font-family: Verdana, Geneva, Tahoma, sans-serif;
 font-size: 14px;
 color: rgb(31, 31, 31);
 }
+
 button:hover {
 background-color: coral;
 }
@@ -107,16 +108,36 @@ left: 225px;
 
 p {
 font-size: 20px;
-padding-bottom: 10px;
-padding-top: 5px;
+padding: 10px;
 }
 
 .color-sliders {
   display:block;
-max-width: 200px;
-font-family: Verdana, Geneva, Tahoma, sans-serif;
+  max-width: 200px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
-.slider{
+.slider {
   display:block;
+  padding: 5px;
 }
+
+#filter-name {
+  margin-top: 18px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+#user-email {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+#sign-in-options {
+  display: block;
+  margin-top: 160px;
+}
+
+#user-email {
+  text-align: center;
+  padding-top: 20px;
+}
+
