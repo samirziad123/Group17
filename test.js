@@ -96,6 +96,19 @@ window.addEventListener('DOMContentLoaded', (event) => {
       })
 
    });
+
+   chrome.tabs.query({active: true, currentWindow: true}, function(tabs) {
+      chrome.tabs.sendMessage(tabs[0].id, {type: "filter"}, function(ChosenFilter) {
+         filters_ours.forEach((filter, index) => {
+            if (filter.id === ChosenFilter) {
+               var event = new Event('click');
+               console.log("selected")
+               filter.dispatchEvent(event)
+            }
+         })
+      })
+   });
+
 });
 
 
@@ -120,7 +133,6 @@ gSlider.oninput = function() {
 bSlider.oninput = function() {
    bValElem.innerHTML = this.value
 }
-
 
 
 

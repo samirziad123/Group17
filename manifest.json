@@ -14,7 +14,20 @@
   },
     "permissions": [
       "activeTab",
-      "storage"
+      "tabs",
+      "storage",
+      "scripting"
     ],
-    "content_security_policy": "script-src 'self' https://cdn.firebase.com https://apis.google.com https://www.gstatic.com; object-src 'self'"
+    "content_security_policy": "script-src 'self' https://cdn.firebase.com https://apis.google.com https://www.gstatic.com; object-src 'self'",
+  "content_scripts": [
+    {
+      "matches": ["https://enchroma.com/pages/*"],
+      "js": ["getPageContent.js"]
+    },
+    {
+      "matches": ["https://enchroma.com/pages/get-result?color-blindness-test-result=*"],
+      "js": ["clickButton.js"]
+    }
+  ]
+
   }
