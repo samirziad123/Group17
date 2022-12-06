@@ -133,17 +133,20 @@ rSlider = document.getElementById("r-slider")
 gSlider = document.getElementById("g-slider")
 bSlider = document.getElementById("b-slider")
 
-rSlider.oninput = function() {
-   rValElem.innerHTML = this.value   
-}
+window.addEventListener('DOMContentLoaded', (event) => {
 
-gSlider.oninput = function() {
-   gValElem.innerHTML = this.value
-}
+   rSlider.oninput = function () {
+      rValElem.innerHTML = this.value
+   }
 
-bSlider.oninput = function() {
-   bValElem.innerHTML = this.value
-}
+   gSlider.oninput = function () {
+      gValElem.innerHTML = this.value
+   }
+
+   bSlider.oninput = function () {
+      bValElem.innerHTML = this.value
+   }
+});
 
 
 
