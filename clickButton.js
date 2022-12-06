@@ -19,6 +19,6 @@ function waitForElm(selector) {
 };
 
 waitForElm('bdf-e bdf-e-72p49yn no-thanks-section bdf-w bdf-w-text-editor').then((elm) => {
-    var link = document.getElementsByClassName('bdf-e bdf-e-72p49yn no-thanks-section bdf-w bdf-w-text-editor')[0].getElementsByTagName('a')[0];
+    let link = document.getElementsByClassName('bdf-e bdf-e-72p49yn no-thanks-section bdf-w bdf-w-text-editor')[0].getElementsByTagName('a')[0];
     link.click();
 });

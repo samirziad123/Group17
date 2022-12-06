@@ -112,7 +112,7 @@ window.addEventListener('DOMContentLoaded', (event) => {
       chrome.tabs.sendMessage(tabs[0].id, {type: "filter"}, function(ChosenFilter) {
          filters_ours.forEach((filter, index) => {
             if (filter.id === ChosenFilter) {
-               var event = new Event('click');
+               let event = new Event('click');
                console.log("selected")
                filter.dispatchEvent(event)
             }
@@ -125,13 +125,13 @@ window.addEventListener('DOMContentLoaded', (event) => {
 
 
 
-var rValElem = document.getElementById("rVal")
-var gValElem = document.getElementById("gVal")
-var bValElem = document.getElementById("bVal")
+let rValElem = document.getElementById("rVal")
+let gValElem = document.getElementById("gVal")
+let bValElem = document.getElementById("bVal")
 
-rSlider = document.getElementById("r-slider")
-gSlider = document.getElementById("g-slider")
-bSlider = document.getElementById("b-slider")
+let rSlider = document.getElementById("r-slider")
+let gSlider = document.getElementById("g-slider")
+let bSlider = document.getElementById("b-slider")
 
 window.addEventListener('DOMContentLoaded', (event) => {
 

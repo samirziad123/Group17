@@ -1,7 +1,7 @@
 <!DOCTYPE html>
-<html>
+<html lang="eng">
   <head>
-
+    <title>Color Corrector Extension</title>
     <script src="https://www.gstatic.com/firebasejs/7.19.1/firebase-app.js"></script>
     <script src="https://www.gstatic.com/firebasejs/7.19.1/firebase-auth.js"></script>
     <script src="https://cdn.firebase.com/libs/firebaseui/3.5.2/firebaseui.js"></script>
@@ -28,7 +28,7 @@
             <li id="custom" class="filter">Custom</li>
           </ul>
           <div class="third-party">
-            <a href="https://enchroma.com/pages/color-blindness-test?format2=number" target="_blank">
+            <a href="https://enchroma.com/pages/color-blindness-test?format2=number" target="_blank" rel="noopener">
               <button class="third-party-content"> 3rd Party Test </button>
             </a>
           </div>
@@ -39,9 +39,9 @@
           </ul>
           <p>Create a new custom filter:</p>
           <div id="color-sliders">
-            <input class="slider" type="range" min="0" max="255" value="0" id="r-slider">Red: <b id="rVal">0</b></input>
-            <input class="slider" type="range" min="0" max="255" value="0" id="g-slider">Green: <b id="gVal">0</b></input>
-            <input class="slider" type="range" min="0" max="255" value="0" id="b-slider">Blue: <b id="bVal">0</b></input>
+            <input class="slider" type="range" min="0" max="255" value="0" id="r-slider">Red: <strong id="rVal">0</strong></input>
+            <input class="slider" type="range" min="0" max="255" value="0" id="g-slider">Green: <strong id="gVal">0</strong></input>
+            <input class="slider" type="range" min="0" max="255" value="0" id="b-slider">Blue: <strong id="bVal">0</strong></input>
           </div>
           <input type="text" id="filter-name">Name your filter</input>
           <button class="new-filter">Add Filter</button>

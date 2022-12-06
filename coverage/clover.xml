@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1670361220147" clover="3.2.0">
-  <project timestamp="1670361220147" name="All files">
+<coverage generated="1670366612746" clover="3.2.0">
+  <project timestamp="1670366612747" name="All files">
     <metrics statements="71" coveredstatements="13" conditionals="10" coveredconditionals="0" methods="28" coveredmethods="0" elements="109" coveredelements="13" complexity="0" loc="71" ncloc="71" packages="1" files="1" classes="1"/>
     <file name="test.js" path="/Users/samirziad/IdeaProjects/ColorCorrector/Group17/test.js">
       <metrics statements="71" coveredstatements="13" conditionals="10" coveredconditionals="0" methods="28" coveredmethods="0"/>

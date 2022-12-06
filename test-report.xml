@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <testExecutions version="1">
   <file path="/Users/samirziad/IdeaProjects/ColorCorrector/Group17/tests/unit/filters.test.js">
-    <testCase name="Check that selection of protanopia filter is applied upon click" duration="10"/>
+    <testCase name="Check that selection of protanopia filter is applied upon click" duration="214"/>
     <testCase name="Check that selection of tritanopia filter is applied upon click" duration="0"/>
     <testCase name="Check that selection of deuteranomaly filter is applied upon click" duration="0"/>
     <testCase name="Check that selection of deuteranopia filter is applied upon click" duration="0"/>
