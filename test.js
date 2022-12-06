@@ -82,9 +82,11 @@ window.addEventListener('DOMContentLoaded', (event) => {
       newli.RGB = [rValElem.innerHTML, gValElem.innerHTML, bValElem.innerHTML]
       list = document.querySelector(".custom-list")
       list.appendChild(newli)
+   })
 
-      
-      
+   //on button click, delete currently selected filter
+   document.querySelector('.del-filter').addEventListener('click', () => {
+      document.querySelector('.custom-filter.active').remove()
    })
 
    //extraneous test, ignore for now
