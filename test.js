@@ -84,10 +84,7 @@ window.addEventListener('DOMContentLoaded', (event) => {
       list.appendChild(newli)
    })
 
-   //on button click, delete currently selected filter
-   document.querySelector('.del-filter').addEventListener('click', () => {
-      document.querySelector('.custom-filter.active').remove()
-   })
+   
 
    //extraneous test, ignore for now
    document.querySelector('.del-filter').addEventListener('click', () => {
