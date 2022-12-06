@@ -30,7 +30,6 @@ filters_ours.forEach((filter,index) => {
       filters_ours[index].classList.add('active');
 
    })   
-    
 })
 
 //on click, select custom filter
