@@ -131,7 +131,37 @@ padding: 10px;
 
 .slider {
   display:block;
-  padding: 5px;
+  padding: 8px;
+  -webkit-appearance: none;
+}
+
+.slider::-webkit-slider-runnable-track {
+  height: 3px;
+  border: 0px;
+  -webkit-appearance: none;
+}
+
+#r-slider::-webkit-slider-runnable-track {
+  background: red;
+}
+
+#g-slider::-webkit-slider-runnable-track {
+  background: green;
+}
+
+#b-slider::-webkit-slider-runnable-track {
+  background: blue;
+}
+
+.slider::-webkit-slider-thumb {
+  box-shadow: 0px 0px 0px #000000;
+  border: none;
+  height: 10px;
+  width: 10px;
+  background: black;
+  cursor: pointer;
+  -webkit-appearance: none;
+  margin-top: -3px;
 }
 
 #filter-name {

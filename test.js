@@ -33,9 +33,11 @@ filters_ours.forEach((filter,index) => {
     
 })
 
-custom_filters = document.querySelectorAll('.custom-filter');
+//on click, select custom filter
+window.addEventListener('click', ()=> {
+   custom_filters = document.querySelectorAll('.custom-filter');
 
-custom_filters.forEach((filter,index) => {
+   custom_filters.forEach((filter,index) => {
 
    filter.addEventListener('click', () => {
       custom_filters.forEach(filter => {
@@ -43,10 +45,30 @@ custom_filters.forEach((filter,index) => {
       })
 
       custom_filters[index].classList.add('active');
+      console.log(custom_filters[index].RGB[0])
+
+      chrome.storage.local.get("RGB", function(data){
+   
+         if(data.RGB != undefined){
+         chrome.storage.local.remove("RGB", function(){
+            console.log("Removed")
+         })
+         chrome.storage.local.set({ RGB: custom_filters[index].RGB }, function(data) {
+            console.log("Value[0] is set to " + custom_filters[index].RGB[0]);
+         });
+      }
+      else {
+         chrome.storage.local.set({ RGB: custom_filters[index].RGB }, function(data) {
+            console.log("Value[0] is set to " + custom_filters[index].RGB[0]);
+         });
+      }
+   })
 
    })   
     
 })
+})
+
 
 window.addEventListener('DOMContentLoaded', (event) => {
 
@@ -55,10 +77,16 @@ window.addEventListener('DOMContentLoaded', (event) => {
       
       newli = document.createElement("li")
       newli.textContent = document.getElementById("filter-name").value;
+      newli.setAttribute('id', newli.textContent)
       newli.classList.add('custom-filter')
+      newli.RGB = [rValElem.innerHTML, gValElem.innerHTML, bValElem.innerHTML]
       list = document.querySelector(".custom-list")
       list.appendChild(newli)
-      custom_filters.appendChild(newLi)
+   })
+
+   //on button click, delete currently selected filter
+   document.querySelector('.del-filter').addEventListener('click', () => {
+      document.querySelector('.custom-filter.active').remove()
    })
 
    //extraneous test, ignore for now
@@ -83,6 +111,9 @@ window.addEventListener('DOMContentLoaded', (event) => {
 
 });
 
+
+
+
 var rValElem = document.getElementById("rVal")
 var gValElem = document.getElementById("gVal")
 var bValElem = document.getElementById("bVal")
@@ -102,28 +133,6 @@ gSlider.oninput = function() {
 bSlider.oninput = function() {
    bValElem.innerHTML = this.value
 }
-
-addFilter = document.querySelector(".new-filter")
-
-addFilter.addEventListener('click', () => {
-   RGB = [rValElem.innerHTML, gValElem.innerHTML, bValElem.innerHTML]
-   chrome.storage.local.get("RGB", function(data){
-   if(data.RGB != undefined){
-      chrome.storage.local.remove("RGB", function(){
-         console.log("Removed")
-      })
-      chrome.storage.local.set({ RGB: RGB }, function(data) {
-         console.log("Value[0] is set to " + RGB[0]);
-      });
-   }
-   else {
-      chrome.storage.local.set({ RGB: RGB }, function(data) {
-         console.log("Value[0] is set to " + RGB[0]);
-      });
-   }
-})
-})
-
 
 
 
