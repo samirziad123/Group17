@@ -68,19 +68,32 @@ window.addEventListener('click', ()=> {
 })
 })
 
+function validateName(text) {
+   regEx = /^[0-9a-zA-z]+$/
+   if(text.match(regEx) && text.length > 0){
+      return true
+   }
+   else{
+      alert("Filter name is not valid. Please ensure your name includes only letters and numbers and is not empty.")
+      return false
+   }
+}
 
 window.addEventListener('DOMContentLoaded', (event) => {
 
    //on button click, add custom filter
    document.querySelector('.new-filter').addEventListener('click', () => {
       
-      newli = document.createElement("li")
-      newli.textContent = document.getElementById("filter-name").value;
-      newli.setAttribute('id', newli.textContent)
-      newli.classList.add('custom-filter')
-      newli.RGB = [rValElem.innerHTML, gValElem.innerHTML, bValElem.innerHTML]
-      list = document.querySelector(".custom-list")
-      list.appendChild(newli)
+      if(validateName(document.getElementById("filter-name").value))
+      {
+         newli = document.createElement("li")
+         newli.textContent = document.getElementById("filter-name").value;
+         newli.setAttribute('id', newli.textContent)
+         newli.classList.add('custom-filter')
+         newli.RGB = [rValElem.innerHTML, gValElem.innerHTML, bValElem.innerHTML]
+         list = document.querySelector(".custom-list")
+         list.appendChild(newli)
+      }
    })
 
    //on button click, delete currently selected filter
@@ -88,7 +101,6 @@ window.addEventListener('DOMContentLoaded', (event) => {
       document.querySelector('.custom-filter.active').remove()
    })
 
-   //extraneous test, ignore for now
    document.querySelector('.del-filter').addEventListener('click', () => {
       chrome.storage.local.get([name], function(result){
          console.log(result.value);
