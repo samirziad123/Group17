@@ -18,12 +18,8 @@ const ui = new firebaseui.auth.AuthUI(firebase.auth());
 const uiConfig = {
     callbacks: {
         signInSuccessWithAuthResult: function (authResult, redirectUrl) {
-            chrome.runtime.sendMessage({ message: 'sign_in' }, function (response) {
-                if (response.message === 'success') {
-                    console.log(authResult.user.email);
-                    document.getElementById('user-email').innerHTML = "Logged in as: " + authResult.user.email;
-                }
-            });
+            document.getElementById('user-email').innerHTML = "Logged in as: " + authResult.user.email;
+            console.log(authResult);
             return false;
         }
     },

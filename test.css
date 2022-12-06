@@ -115,9 +115,10 @@ color: rgb(31, 31, 31);
 }
 
 button:hover {
-background-color: coral;
-cursor: pointer;
+  background-color: coral;
+  cursor: pointer;
 }
+
 .new-filter {
 left: 75px;
 }
@@ -188,5 +189,17 @@ padding: 10px;
 #user-email {
   text-align: center;
   padding-top: 20px;
+}
+
+.log-in {
+  margin:auto;
+  padding: 10px;
+  text-align: center;
+  border: 2px solid black;
+  border-color: coral;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 14px;
+  color: rgb(31, 31, 31);
+  background-color: white;
 }
 

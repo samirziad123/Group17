@@ -7,17 +7,13 @@
     "default_popup": "test.html",
     "default_icon": "./images/logo-nobg.png"
   },
-  "background": {
-    "scripts": [
-        "./background.js"
-    ]
-  },
     "permissions": [
       "activeTab",
       "tabs",
       "storage",
       "scripting"
     ],
+    
     "content_security_policy": "script-src 'self' https://cdn.firebase.com https://apis.google.com https://www.gstatic.com; object-src 'self'",
   "content_scripts": [
     {
