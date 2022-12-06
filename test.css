@@ -17,6 +17,18 @@ flex-direction: column;
 width: 100%;
 }
 
+.third-party {
+  margin:auto;
+  padding: 50px;
+  text-align: center;
+}
+
+.third-party-content {
+  margin:auto;
+  padding: 10px;
+  text-align: center;
+}
+
 .tabs-head {
 display: flex;
 width: 100%;
