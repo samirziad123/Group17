@@ -17,5 +17,4 @@ chrome.runtime.onMessage.addListener(function (request, sender, sendResponse) {
         sendResponse({ message: 'success' });
     }
     console.log("Signed in? " + signed_in);
-    return true;
 });
